@@ -22,3 +22,7 @@ um máximo de 2 tentativas. Ultrapassadas as 3 tentativas o sistema bloqueia e s
 recuperado pela RECOVERY_CONDITION. Durante este estado o sistema mantém uma
 onda quadrada na saída que irá produzir um alarme sonoro e apresenta o caracter ‘b’ no
 display de 7-segmentos.
+
+## State Machine
+
+![1](1.png)
