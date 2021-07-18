@@ -5,6 +5,7 @@ Pretende-se implementar uma fechadura electrónica programável, recorrendo à p
 - o display de 7-segmentos que funciona como interface com o utilizador;
 - actuando sobre uma tensão de bloqueio num dos portos de E/S (GPIO);
 - verificando a autenticidade comparando o código de 4 dígitos de [0-9], que será introduzida através das teclas SET e LOAD (porto 0), com uma chave secreta.
+
 A chave secreta é válida para múltiplas iterações de bloqueio, num intervalo de tempo de 30 segundos após a última abertura. O utilizador terá de redefinir uma nova durante a operação de fecho se o tempo se esgotar ou assim o pretender. O tempo de reutilização da mesma chave é assinalado com o blink num intervalo de 500 ms do ponto decimal no display de 7-segmentos.
 Como meio de recuperação de acesso ao sistema, deve existir uma backdoor secreta que permite a reprogramação do mesmo com uma nova chave. Esta funcionalidade será reconhecida como RECOVERY_CONDITION.
 Sempre que o sistema recebe uma nova chave secreta, por se tratar de um valor de natureza crítica para o sistema, este valor deve ser encriptado antes de ser armazenado na memória interna, ou seja, este valor nunca pode estar armazenado de forma explícita.
